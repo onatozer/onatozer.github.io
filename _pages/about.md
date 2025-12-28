@@ -4,6 +4,10 @@ title: about
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
+# Projects settings
+display_categories: [Project Lead @MDST, Project Lead @WSA]
+horizontal: true
+
 profile:
   align: right
   image: prof_pic.jpg
@@ -28,3 +32,7 @@ latest_posts:
 ---
 
 Hehe
+
+fdafds
+
+fdasfdas
