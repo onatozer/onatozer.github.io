@@ -712,6 +712,52 @@ footer.sticky-bottom {
   }
 }
 
+.paper-box {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px #efefef solid;
+  padding: 2em 0 2em 0;
+
+  .paper-box-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    order: 2;
+
+    .image-wrapper {
+      position: relative;
+      box-shadow: 3px 3px 6px #888;
+      border-radius: 6px;
+      max-height: 160px;
+      overflow: hidden;
+      transition: max-height 0.6s ease, transform 0.3s ease;
+      cursor: pointer;
+      
+      .badge {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        position: absolute;
+        margin-top: .5em;
+        margin-left: -.5em;
+        color: white;
+        background-color: #00369f;
+        font-size: .8em;
+      }
+    }
+  }
+  
+  .paper-box-text {
+    justify-content: left;
+    padding-left: 2em;
+    max-width: 60%;
+    order: 2;
+  }
+}
+
 // Publications
 
 .publications {
@@ -733,6 +779,7 @@ footer.sticky-bottom {
     }
   }
 
+  //This is just for styling the 'headers', which in our case is just the publication year
   h2.bibliography {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
@@ -741,38 +788,60 @@ footer.sticky-bottom {
     text-align: right;
   }
 
+  //For styling the actual bibliography itself
   ol.bibliography {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em 0 2em 0;
     list-style: none;
-    padding: 0;
-    margin-top: 0;
+    // margin-top: 0;
 
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
-
+      // Image column styling
       .abbr {
-        margin-bottom: 0.5rem;
+        // width: 4px;
+        position: relative;
 
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
+        .preview {
+          position: relative;
+          box-shadow: 3px 3px 6px #888;
+          border-radius: 6px;
+          max-height: 160px;
+          overflow: hidden;
+          transition: max-height 0.6s ease, transform 0.3s ease;
+          cursor: pointer;
+          width: 100%; 
+          object-fit: cover;
+          
+          &:hover {
+            max-height: 300px;
+            transform: scale(1.02);
           }
         }
 
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
+        }
+
+        //The naming isn't great but this is the styling for the banner that goes over the image
+        abbr {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          position: absolute;
+          text-align: left;
+          margin-top: .5em;
+          margin-left: -.5em;
+          color: white;
+          background-color: #00369f;
+          font-size: .8em;
+          width: auto !important; //don't like having to do this, but some other scss file somewhere is calling !important, leaving me no choice
+          z-index: 1;
         }
       }
 
@@ -793,6 +862,7 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bold;
         }
 
         > span.more-authors {
@@ -875,7 +945,7 @@ footer.sticky-bottom {
       }
 
       div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
+        // border: dashed 1px var(--global-bg-color);
       }
 
       div.abstract.hidden.open {
