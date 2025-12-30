@@ -6,12 +6,8 @@ layout: default
   <section id="about">
     <header class="post-header">
       <h1 class="post-title">
-        {% if site.title == 'blank' %}
           <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
           {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
-        {% endif %}
       </h1>
       <p class="desc">{{ page.subtitle }}</p>
     </header>
@@ -120,12 +116,12 @@ layout: default
   </section> {% endcomment %}
 
   <!-- Social Section -->
-  {% if page.social %}
+  {% comment %} {% if page.social %}
     <section id="contact">
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     </section>
-  {% endif %}
+  {% endif %} {% endcomment %}
 </div>

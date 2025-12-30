@@ -838,7 +838,7 @@ footer.sticky-bottom {
           margin-top: .5em;
           margin-left: -.5em;
           color: white;
-          background-color: #00369f;
+          background-color: var(--global-theme-color);
           font-size: .8em;
           width: auto !important; //don't like having to do this, but some other scss file somewhere is calling !important, leaving me no choice
           z-index: 1;
@@ -885,6 +885,7 @@ footer.sticky-bottom {
           display: inline-block;
           
           padding-top: 8px;
+          padding-right: 7.5px;
 
         }
 
@@ -1030,6 +1031,10 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 // Extra Markdown style (post Customization)
