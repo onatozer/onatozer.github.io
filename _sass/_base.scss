@@ -878,6 +878,65 @@ footer.sticky-bottom {
       }
 
       .links {
+        overflow: visible;
+
+        .button-container {
+          position: relative;
+          display: inline-block;
+          
+          padding-top: 8px;
+
+        }
+
+        .button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        .icon {
+          width: 2rem;
+          height: 2rem;
+          // stroke: currentColor;
+          fill: context-stroke;
+          stroke-width: 1;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          transition: transform 0.2s, stroke 0.2s;
+        }
+
+        .button:hover .icon {
+          transform: scale(1.5);
+          // stroke: var(--global-theme-color);
+          // stroke: #3b82f6;
+        }
+
+        .tooltip {
+          opacity: 1;
+          position: absolute;
+          bottom: -3.5rem;
+          left: 50%;
+          transform: translateX(-50%) scale(0);
+          transform-origin: left;
+          z-index: 20;
+          padding: 0.5rem 0.75rem;
+          border-radius: 0.5rem;
+          border: 1px solid #d1d5db;
+          background-color: white;
+          font-size: 0.875rem;
+          font-weight: bold;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          transition: transform 0.3s ease-in-out;
+          white-space: nowrap;
+          pointer-events: none;
+        }
+
+        .button-container:hover .tooltip {
+          transform: translateX(-50%) scale(1);
+        }
+
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -911,52 +970,6 @@ footer.sticky-bottom {
           }
         }
       }
-
-      .hidden {
-        font-size: 0.875rem;
-        max-height: 0px;
-        overflow: hidden;
-        text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
-        }
-
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
-      }
-
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-
-      div.abstract.hidden {
-        // border: dashed 1px var(--global-bg-color);
-      }
-
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
-    }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
-    div.award.hidden.open {
-      border-color: var(--global-highlight-color);
     }
   }
 }
