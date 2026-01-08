@@ -37,7 +37,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello I'm Onat. My research goal is to try to understand how learning works in all its various forms. My belief is that intelligence is not unique to humans and that it follows some shared universal physical laws, humans just so happen to be great at taking advantage of them. To that end, I find deep-RL and LLMs particularly interesting because they're methods of artificial intelligence directly inspired by how humans think.
+Hello 👋 I'm Onat. My research goal is to try to understand how learning works in all its various forms. My belief is that intelligence is not unique to humans and that it follows some shared universal physical laws, humans just so happen to be great at taking advantage of them. To that end, I find deep-RL and LLMs particularly promising because they're methods of artificial intelligence directly inspired by how humans think.
 
 I'm currently an undergraduate at University of Michigan studying Mathematics and Computer Science. For the last 3 years, I was a part of Perry Sampson's [LearningClues MDP group]("https://www.learningclues.com/"), where I researched systems that could automatically generate questions from professors' lectures and determine how much time was devoted to which topic throughout lecture. The following summer I worked at the [University of Cinncinati's biomedical sciences lab](https://www.ceas.uc.edu/research/centers-labs/emission-tomography-imaging-lab.html), where we studied how ml could be practically implemented to help physicians, and I'm currently participating in the [Algoverse AI research program](https://algoverseairesearch.org/) as part of the Spring 26 cohort. 
 
