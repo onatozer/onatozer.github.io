@@ -116,12 +116,12 @@ layout: default
   </section> {% endcomment %}
 
   <!-- Social Section -->
-  {% comment %} {% if page.social %}
+  {% if page.social %}
     <section id="contact">
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     </section>
-  {% endif %} {% endcomment %}
+  {% endif %}
 </div>
